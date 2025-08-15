@@ -66,14 +66,17 @@ body {
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: clamp(1.8em, 4vw, 3em);
     margin-bottom: 20px;
-    white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid var(--cor-destaque);
-    width: 0;
+    display: inline-block;
     animation: typing 3s steps(30) forwards, blink 0.8s infinite step-end alternate;
+    max-width: 100%;
+    white-space: normal; /* Permite quebra de linha em telas pequenas */
+    word-wrap: break-word;
 }
+
 
 .hero p {
     font-size: 1.3em;
@@ -211,9 +214,10 @@ footer {
 }
 
 @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0 0 0 0); }
 }
+
 
 @keyframes blink {
     50% { border-color: transparent; }
