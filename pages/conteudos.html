@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdos - Aulas Gratuitas de Blender</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="../imagens/blender_logo_icon_214689.ico">
+</head>
+<body>
+    <div class="container">
+        <main>
+            <section class="hero">
+                <h2>Conteúdos</h2>
+                <p>Aqui você encontrará uma lista de conteúdos disponíveis para aprender Blender.</p>
+            </section>
+            <section class="aulas">
+                <!-- Módulo 0 -->
+                <div class="aula"><a href="../arquivos/aula1/aula1.zip" download="aula1.zip">Aula 1 - Apresentação e Objetivos</a></div>
+                <div class="aula"><a href="../arquivos/aula2/aula2.zip" download="aula2.zip">Aula 2 - Instalando o Blender</a></div>
+                <div class="aula"><a href="../arquivos/aula3/aula3.zip" download="aula3.zip">Aula 3 - Interface e Atalhos Essenciais</a></div>
+                <div class="aula"><a href="../arquivos/aula4/aula4.zip" download="aula4.zip">Aula 4 - Referências no Estilo RPG</a></div>
+                <!-- Módulo 1 -->
+                <div class="aula"><a href="../arquivos/aula5/aula5.zip" download="aula5.zip">Aula 5 - Criando o Terreno Base</a></div>
+                <div class="aula"><a href="../arquivos/aula6/aula6.zip" download="aula6.zip">Aula 6 - Definindo Áreas do Mapa</a></div>
+                <div class="aula"><a href="../arquivos/aula7/aula7.zip" download="aula7.zip">Aula 7 - Adicionando Placeholders</a></div>
+                <!-- Módulo 2 -->
+                <div class="aula"><a href="../arquivos/aula8/aula8.zip" download="aula8.zip">Aula 8 - Modelando Casa Principal</a></div>
+                <div class="aula"><a href="../arquivos/aula9/aula9.zip" download="aula9.zip">Aula 9 - Modelando Árvores Estilizadas</a></div>
+                <div class="aula"><a href="../arquivos/aula10/aula10.zip" download="aula10.zip">Aula 10 - Criando Props Simples</a></div>
+                <div class="aula"><a href="../arquivos/aula11/aula11.zip" download="aula11.zip">Aula 11 - Mantendo Estilo Coeso</a></div>
+                <!-- Módulo 3 -->
+                <div class="aula"><a href="../arquivos/aula12/aula12.zip" download="aula12.zip">Aula 12 - Introdução ao Sculpt</a></div>
+                <div class="aula"><a href="../arquivos/aula13/aula13.zip" download="aula13.zip">Aula 13 - Sculptando o Terreno</a></div>
+                <div class="aula"><a href="../arquivos/aula14/aula14.zip" download="aula14.zip">Aula 14 - Detalhes Orgânicos</a></div>
+                <!-- Módulo 4 -->
+                <div class="aula"><a href="../arquivos/aula15/aula15.zip" download="aula15.zip">Aula 15 - Shading Cartoon Básico</a></div>
+                <div class="aula"><a href="../arquivos/aula16/aula16.zip" download="aula16.zip">Aula 16 - Paleta de Cores</a></div>
+                <div class="aula"><a href="../arquivos/aula17/aula17.zip" download="aula17.zip">Aula 17 - Aplicando Texturas Simples</a></div>
+                <!-- Módulo 5 -->
+                <div class="aula"><a href="../arquivos/aula18/aula18.zip" download="aula18.zip">Aula 18 - Iluminação Básica</a></div>
+                <div class="aula"><a href="../arquivos/aula19/aula19.zip" download="aula19.zip">Aula 19 - Configuração de Câmera</a></div>
+                <div class="aula"><a href="../arquivos/aula20/aula20.zip" download="aula20.zip">Aula 20 - Render Final e Exportação</a></div>
+                <!-- Módulo Bônus -->
+                <div class="aula"><a href="../arquivos/aula21/aula21.zip" download="aula21.zip">Aula Bônus 1 - Apresentando seu Projeto</a></div>
+                <div class="aula"><a href="../arquivos/aula22/aula22.zip" download="aula22.zip">Aula Bônus 2 - Criando Showcase em Vídeo</a></div>
+                <div class="aula"><a href="../arquivos/aula23/aula23.zip" download="aula23.zip">Aula Bônus 3 - O que Vem no Curso Avançado</a></div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2025 Aulas Gratuitas de Blender. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
+<script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, { threshold: 0.15 });
+
+    sections.forEach(sec => observer.observe(sec));
+</script>

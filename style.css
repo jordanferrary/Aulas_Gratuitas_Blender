@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-fundo: #1E1212;
+    --cor-texto: #E6DDDD;
+    --cor-destaque: #ff3b3b;
+    --cor-destaque-hover: #ff6363;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    min-height: 100vh;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+
+/* Navegação */
+.nav {
+    background: rgba(30, 18, 18, 0.9);
+    padding: 12px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+    animation: fadeDown 0.8s ease forwards;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.nav a {
+    color: var(--cor-texto);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 8px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.nav a:hover {
+    color: var(--cor-destaque);
+    transform: scale(1.05);
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(rgba(30, 18, 18, 0.75), rgba(30, 18, 18, 0.75)),
+                url('imagens/hero_background.jpg') center/cover no-repeat;
+    padding: 100px 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid var(--cor-destaque);
+    width: 0;
+    animation: typing 3s steps(30) forwards, blink 0.8s infinite step-end alternate;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-top: 15px;
+    opacity: 0;
+    animation: fadeInUp 1s ease 3.2s forwards;
+}
+
+#aulas .aulas-materiais {
+    text-align: center;
+}
+
+.btn-cta {
+    margin-top: 20px;
+    display: inline-block;
+    background: var(--cor-destaque);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    opacity: 0;
+    animation: fadeInUp 1s ease 3.5s forwards;
+}
+
+.btn-cta:hover {
+    background: var(--cor-destaque-hover);
+    transform: scale(1.05);
+}
+
+/* Conteúdo */
+section {
+    padding: 50px 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+section li {
+    margin-bottom: 10px;
+    list-style: none;
+    padding-left: 20px;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Cards de aulas */
+.aulas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.aula {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.aula:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3);
+}
+
+.aula a {
+    color: var(--cor-destaque);
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.aula a:hover {
+    color: var(--cor-destaque-hover);
+}
+
+/* Contato */
+.contato {
+    text-align: center;
+}
+
+.redes {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.imgbotao {
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.imgbotao:hover {
+    transform: scale(1.1);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid var(--cor-texto);
+    padding: 20px;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}

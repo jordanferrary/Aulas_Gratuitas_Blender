@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="imagens/blender_logo_icon_214689.ico">
+    <title>Aulas Gratuitas de Blender</title>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#beneficios">Por que Aprender?</a></li>
+            <li><a href="pages/conteudos.html">Conteúdo</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#aulas">Aulas</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main>
+            <!-- Hero Section -->
+            <section id="hero" class="hero">
+                <h1>Domine o Blender do Zero ao Avançado — Gratuitamente!</h1>
+                <p>Transforme suas ideias em incríveis modelos e animações 3D com nosso curso gratuito e exclusivo de Blender. <strong>Sem enrolação, direto ao ponto!</strong></p>
+                <a href="pages/conteudos.html" class="btn-cta">📥 Começar Agora</a>
+            </section>
+
+            <!-- Benefícios -->
+            <section id="beneficios" class="beneficios">
+                <h2>Por que Aprender Blender Conosco?</h2>
+                <ul>
+                    <li>✅ Método rápido e descomplicado para iniciantes</li>
+                    <li>✅ Projetos práticos para aplicar o que aprender</li>
+                    <li>✅ Materiais de apoio para baixar e praticar</li>
+                    <li>✅ Comunidade no Discord para tirar dúvidas</li>
+                </ul>
+            </section>
+
+            <!-- O que é Blender -->
+            <section class="content">
+                <h2>O que é o Blender?</h2>
+                <p>O <strong>Blender</strong> é um dos softwares mais poderosos e completos para criação de conteúdo 3D. Com ele, você pode modelar, animar, renderizar, compor, editar vídeos e muito mais — tudo de forma gratuita e com suporte da comunidade mundial.</p>
+            </section>
+
+            <!-- Destaque do Curso -->
+            <section id="aulas" class="curso">
+                <h2>O que Você Vai Aprender</h2>
+                <p>Nesse curso gratuito, você criará <strong>um cenário completo de RPG</strong> no Blender, aprendendo blocagem, modelagem, escultura, texturização e iluminação básica.</p>
+                <div class="aulas-materiais">
+                    <a href="pages/conteudos.html" class="btn-cta">🚀 Acessar os Materiais</a>
+                    <a href="pages/conteudos.html" class="btn-cta">🚀 Acessar as Aulas</a>
+                </div>
+
+
+            </section>
+
+            <!-- Contato -->
+            <section id="contato" class="contato">
+                <h2>Entre em Contato</h2>
+                <p>Participe da nossa comunidade no Discord e troque experiências com outros criadores!</p>
+                <div class="redes">
+                    <a href="https://discord.gg/CPeDZw8N6Z" target="_blank">
+                        <img src="imagens/discord_icon_198220.png" alt="Discord Logo" class="imgbotao">
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2025 Aulas Gratuitas de Blender. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+<script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, { threshold: 0.15 });
+
+    sections.forEach(sec => observer.observe(sec));
+</script>
